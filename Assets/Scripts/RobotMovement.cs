@@ -39,18 +39,59 @@ public class RobotMovement : MonoBehaviour
     {
         controls = new PlayerControls();
 
-        controls.Gameplay.MoveLeft.performed += ctx => moveLeft = ctx.ReadValue<Vector2>();
-        controls.Gameplay.MoveLeft.canceled += ctx => moveLeft = Vector2.zero;
+        // left joystick
+        controls.GamePlay.StickLeft.performed += ctx => moveLeft = ctx.ReadValue<Vector2>();
+        controls.GamePlay.StickLeft.canceled += ctx => moveLeft = Vector2.zero;
 
-        controls.Gameplay.MoveRight.performed += ctx => moveRight = ctx.ReadValue<Vector2>();
-        controls.Gameplay.MoveRight.canceled += ctx => moveRight = Vector2.zero;
+        // right joystick
+        controls.GamePlay.StickRight.performed += ctx => moveRight = ctx.ReadValue<Vector2>();
+        controls.GamePlay.StickRight.canceled += ctx => moveRight = Vector2.zero;
 
-        controls.Gameplay.RestartLevel.performed += ctx => RestartLevel();
+
+        // WSAD keys
+        controls.GamePlay.KeyMoveForward.performed += ctx => ForwardKey(true);
+        controls.GamePlay.KeyMoveForward.canceled += ctx => ForwardKey(false);
+
+        controls.GamePlay.KeyMoveBackward.performed += ctx => BackwardKey(true);
+        controls.GamePlay.KeyMoveBackward.canceled += ctx => BackwardKey(false);
+
+        controls.GamePlay.KeyTurnLeft.performed += ctx => LeftKey(true);
+        controls.GamePlay.KeyTurnLeft.canceled += ctx => LeftKey(false);
+
+        controls.GamePlay.KeyTurnRight.performed += ctx => RightKey(true);
+        controls.GamePlay.KeyTurnRight.canceled += ctx => RightKey(false);
+
+        controls.GamePlay.RestartLevel.performed += ctx => RestartLevel();
 
         // TODO should probably be in Start
         txtConeCounter = GameObject.Find("txtConeCounter").GetComponent<Text>();
         txtConeCounter.text = coneCounter.ToString();
         rbRobot.centerOfMass = Vector3.zero;
+    }
+
+
+    void ForwardKey(bool b)
+    {
+        if (b) moveLeft.y = 0.75f;
+        else moveLeft.y = 0.0f;
+    }
+
+    void BackwardKey(bool b)
+    {
+        if (b) moveLeft.y = -0.75f;
+        else moveLeft.y = 0.0f;
+    }
+
+    void RightKey(bool b)
+    {
+        if (b) moveRight.x = 0.75f;
+        else moveRight.x = 0.0f;
+    }
+
+    void LeftKey(bool b)
+    {
+        if (b) moveRight.x = -0.75f;
+        else moveRight.x = 0.0f;
     }
 
     void FixedUpdate()
@@ -138,11 +179,11 @@ public class RobotMovement : MonoBehaviour
 
     void OnEnable()
     {
-        controls.Gameplay.Enable();
+        controls.GamePlay.Enable();
     }
 
     void OnDisable()
     {
-        controls.Gameplay.Disable();
+        controls.GamePlay.Disable();
     }
 }

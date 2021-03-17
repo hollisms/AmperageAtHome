@@ -1,0 +1,147 @@
+{
+    "name": "PlayerControls",
+    "maps": [
+        {
+            "name": "GamePlay",
+            "id": "c2a4b8c1-9d49-4092-b4fd-1250506eb431",
+            "actions": [
+                {
+                    "name": "StickLeft",
+                    "type": "Value",
+                    "id": "2e47bdf2-5292-4061-ae73-eb7537884855",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "StickRight",
+                    "type": "Value",
+                    "id": "07876c56-596e-4f52-b522-668e2410b2c1",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "KeyMoveForward",
+                    "type": "Button",
+                    "id": "59d322cb-76da-40c7-8abc-3882243efb0f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RestartLevel",
+                    "type": "Button",
+                    "id": "122f42b2-dbaf-4c43-a8f5-ac1fdc5d03a7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "KeyMoveBackward",
+                    "type": "Button",
+                    "id": "85fa5c62-4db4-448c-9377-a9984325550a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "KeyTurnLeft",
+                    "type": "Button",
+                    "id": "c2fdf0f7-66b7-4a67-bddd-5871b2ba2338",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "KeyTurnRight",
+                    "type": "Button",
+                    "id": "3ce0556a-6e55-412f-9f2f-50f51fb9e04b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6467cbf5-e3d6-4d61-af74-def8102a14e6",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StickLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "75266737-080e-4358-bb68-86e3b3382f46",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StickRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "67516118-321a-4d4d-88d0-ef446b7eb217",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyMoveForward",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e0032ce9-1b86-44fb-9aa6-25ad8f9e7fa1",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RestartLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fc777f7c-a30a-4a23-ab51-6aab58718762",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyMoveBackward",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0d0e82dd-2903-499f-9915-31b17aac20d8",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyTurnLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cd1bbc50-5d79-4860-9377-ca90e78c53a3",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyTurnRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

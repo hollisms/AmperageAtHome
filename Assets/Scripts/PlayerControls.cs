@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/PlayerControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/PlayerControls.inputactions'
 
 using System;
 using System.Collections;
@@ -15,29 +15,61 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     ""name"": ""PlayerControls"",
     ""maps"": [
         {
-            ""name"": ""Gameplay"",
-            ""id"": ""e8aa381d-8e49-4864-837f-abdb2f2158e4"",
+            ""name"": ""GamePlay"",
+            ""id"": ""c2a4b8c1-9d49-4092-b4fd-1250506eb431"",
             ""actions"": [
                 {
-                    ""name"": ""MoveLeft"",
+                    ""name"": ""StickLeft"",
                     ""type"": ""Value"",
-                    ""id"": ""2ece196f-f8a9-4975-a37b-bd8f4c9226b3"",
+                    ""id"": ""2e47bdf2-5292-4061-ae73-eb7537884855"",
                     ""expectedControlType"": ""Stick"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""MoveRight"",
+                    ""name"": ""StickRight"",
                     ""type"": ""Value"",
-                    ""id"": ""feb8230f-827d-42ca-b26b-06148f32eec2"",
+                    ""id"": ""07876c56-596e-4f52-b522-668e2410b2c1"",
                     ""expectedControlType"": ""Stick"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""KeyMoveForward"",
+                    ""type"": ""Button"",
+                    ""id"": ""59d322cb-76da-40c7-8abc-3882243efb0f"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
                     ""name"": ""RestartLevel"",
                     ""type"": ""Button"",
-                    ""id"": ""f7790a4f-1019-4e10-bd2d-f123d592076f"",
+                    ""id"": ""122f42b2-dbaf-4c43-a8f5-ac1fdc5d03a7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""KeyMoveBackward"",
+                    ""type"": ""Button"",
+                    ""id"": ""85fa5c62-4db4-448c-9377-a9984325550a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""KeyTurnLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""c2fdf0f7-66b7-4a67-bddd-5871b2ba2338"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""KeyTurnRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""3ce0556a-6e55-412f-9f2f-50f51fb9e04b"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -46,34 +78,78 @@ public class @PlayerControls : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""aa4bf37b-8239-4b66-a86c-78a597c2dd68"",
+                    ""id"": ""6467cbf5-e3d6-4d61-af74-def8102a14e6"",
                     ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MoveLeft"",
+                    ""action"": ""StickLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a0e0e564-5a74-416f-b0e6-565adb214edf"",
+                    ""id"": ""75266737-080e-4358-bb68-86e3b3382f46"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MoveRight"",
+                    ""action"": ""StickRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""e080d8b5-4c03-42cc-99f9-42f7716000be"",
+                    ""id"": ""67516118-321a-4d4d-88d0-ef446b7eb217"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyMoveForward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e0032ce9-1b86-44fb-9aa6-25ad8f9e7fa1"",
                     ""path"": ""<Gamepad>/dpad/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""RestartLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fc777f7c-a30a-4a23-ab51-6aab58718762"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyMoveBackward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0d0e82dd-2903-499f-9915-31b17aac20d8"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyTurnLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cd1bbc50-5d79-4860-9377-ca90e78c53a3"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KeyTurnRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -82,11 +158,15 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // Gameplay
-        m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
-        m_Gameplay_MoveLeft = m_Gameplay.FindAction("MoveLeft", throwIfNotFound: true);
-        m_Gameplay_MoveRight = m_Gameplay.FindAction("MoveRight", throwIfNotFound: true);
-        m_Gameplay_RestartLevel = m_Gameplay.FindAction("RestartLevel", throwIfNotFound: true);
+        // GamePlay
+        m_GamePlay = asset.FindActionMap("GamePlay", throwIfNotFound: true);
+        m_GamePlay_StickLeft = m_GamePlay.FindAction("StickLeft", throwIfNotFound: true);
+        m_GamePlay_StickRight = m_GamePlay.FindAction("StickRight", throwIfNotFound: true);
+        m_GamePlay_KeyMoveForward = m_GamePlay.FindAction("KeyMoveForward", throwIfNotFound: true);
+        m_GamePlay_RestartLevel = m_GamePlay.FindAction("RestartLevel", throwIfNotFound: true);
+        m_GamePlay_KeyMoveBackward = m_GamePlay.FindAction("KeyMoveBackward", throwIfNotFound: true);
+        m_GamePlay_KeyTurnLeft = m_GamePlay.FindAction("KeyTurnLeft", throwIfNotFound: true);
+        m_GamePlay_KeyTurnRight = m_GamePlay.FindAction("KeyTurnRight", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -133,58 +213,94 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         asset.Disable();
     }
 
-    // Gameplay
-    private readonly InputActionMap m_Gameplay;
-    private IGameplayActions m_GameplayActionsCallbackInterface;
-    private readonly InputAction m_Gameplay_MoveLeft;
-    private readonly InputAction m_Gameplay_MoveRight;
-    private readonly InputAction m_Gameplay_RestartLevel;
-    public struct GameplayActions
+    // GamePlay
+    private readonly InputActionMap m_GamePlay;
+    private IGamePlayActions m_GamePlayActionsCallbackInterface;
+    private readonly InputAction m_GamePlay_StickLeft;
+    private readonly InputAction m_GamePlay_StickRight;
+    private readonly InputAction m_GamePlay_KeyMoveForward;
+    private readonly InputAction m_GamePlay_RestartLevel;
+    private readonly InputAction m_GamePlay_KeyMoveBackward;
+    private readonly InputAction m_GamePlay_KeyTurnLeft;
+    private readonly InputAction m_GamePlay_KeyTurnRight;
+    public struct GamePlayActions
     {
         private @PlayerControls m_Wrapper;
-        public GameplayActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @MoveLeft => m_Wrapper.m_Gameplay_MoveLeft;
-        public InputAction @MoveRight => m_Wrapper.m_Gameplay_MoveRight;
-        public InputAction @RestartLevel => m_Wrapper.m_Gameplay_RestartLevel;
-        public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
+        public GamePlayActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @StickLeft => m_Wrapper.m_GamePlay_StickLeft;
+        public InputAction @StickRight => m_Wrapper.m_GamePlay_StickRight;
+        public InputAction @KeyMoveForward => m_Wrapper.m_GamePlay_KeyMoveForward;
+        public InputAction @RestartLevel => m_Wrapper.m_GamePlay_RestartLevel;
+        public InputAction @KeyMoveBackward => m_Wrapper.m_GamePlay_KeyMoveBackward;
+        public InputAction @KeyTurnLeft => m_Wrapper.m_GamePlay_KeyTurnLeft;
+        public InputAction @KeyTurnRight => m_Wrapper.m_GamePlay_KeyTurnRight;
+        public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(GameplayActions set) { return set.Get(); }
-        public void SetCallbacks(IGameplayActions instance)
+        public static implicit operator InputActionMap(GamePlayActions set) { return set.Get(); }
+        public void SetCallbacks(IGamePlayActions instance)
         {
-            if (m_Wrapper.m_GameplayActionsCallbackInterface != null)
+            if (m_Wrapper.m_GamePlayActionsCallbackInterface != null)
             {
-                @MoveLeft.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveLeft;
-                @MoveLeft.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveLeft;
-                @MoveLeft.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveLeft;
-                @MoveRight.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveRight;
-                @MoveRight.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveRight;
-                @MoveRight.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMoveRight;
-                @RestartLevel.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRestartLevel;
-                @RestartLevel.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRestartLevel;
-                @RestartLevel.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRestartLevel;
+                @StickLeft.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnStickLeft;
+                @StickLeft.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnStickLeft;
+                @StickLeft.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnStickLeft;
+                @StickRight.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnStickRight;
+                @StickRight.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnStickRight;
+                @StickRight.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnStickRight;
+                @KeyMoveForward.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyMoveForward;
+                @KeyMoveForward.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyMoveForward;
+                @KeyMoveForward.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyMoveForward;
+                @RestartLevel.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnRestartLevel;
+                @RestartLevel.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnRestartLevel;
+                @RestartLevel.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnRestartLevel;
+                @KeyMoveBackward.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyMoveBackward;
+                @KeyMoveBackward.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyMoveBackward;
+                @KeyMoveBackward.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyMoveBackward;
+                @KeyTurnLeft.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyTurnLeft;
+                @KeyTurnLeft.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyTurnLeft;
+                @KeyTurnLeft.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyTurnLeft;
+                @KeyTurnRight.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyTurnRight;
+                @KeyTurnRight.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyTurnRight;
+                @KeyTurnRight.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyTurnRight;
             }
-            m_Wrapper.m_GameplayActionsCallbackInterface = instance;
+            m_Wrapper.m_GamePlayActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @MoveLeft.started += instance.OnMoveLeft;
-                @MoveLeft.performed += instance.OnMoveLeft;
-                @MoveLeft.canceled += instance.OnMoveLeft;
-                @MoveRight.started += instance.OnMoveRight;
-                @MoveRight.performed += instance.OnMoveRight;
-                @MoveRight.canceled += instance.OnMoveRight;
+                @StickLeft.started += instance.OnStickLeft;
+                @StickLeft.performed += instance.OnStickLeft;
+                @StickLeft.canceled += instance.OnStickLeft;
+                @StickRight.started += instance.OnStickRight;
+                @StickRight.performed += instance.OnStickRight;
+                @StickRight.canceled += instance.OnStickRight;
+                @KeyMoveForward.started += instance.OnKeyMoveForward;
+                @KeyMoveForward.performed += instance.OnKeyMoveForward;
+                @KeyMoveForward.canceled += instance.OnKeyMoveForward;
                 @RestartLevel.started += instance.OnRestartLevel;
                 @RestartLevel.performed += instance.OnRestartLevel;
                 @RestartLevel.canceled += instance.OnRestartLevel;
+                @KeyMoveBackward.started += instance.OnKeyMoveBackward;
+                @KeyMoveBackward.performed += instance.OnKeyMoveBackward;
+                @KeyMoveBackward.canceled += instance.OnKeyMoveBackward;
+                @KeyTurnLeft.started += instance.OnKeyTurnLeft;
+                @KeyTurnLeft.performed += instance.OnKeyTurnLeft;
+                @KeyTurnLeft.canceled += instance.OnKeyTurnLeft;
+                @KeyTurnRight.started += instance.OnKeyTurnRight;
+                @KeyTurnRight.performed += instance.OnKeyTurnRight;
+                @KeyTurnRight.canceled += instance.OnKeyTurnRight;
             }
         }
     }
-    public GameplayActions @Gameplay => new GameplayActions(this);
-    public interface IGameplayActions
+    public GamePlayActions @GamePlay => new GamePlayActions(this);
+    public interface IGamePlayActions
     {
-        void OnMoveLeft(InputAction.CallbackContext context);
-        void OnMoveRight(InputAction.CallbackContext context);
+        void OnStickLeft(InputAction.CallbackContext context);
+        void OnStickRight(InputAction.CallbackContext context);
+        void OnKeyMoveForward(InputAction.CallbackContext context);
         void OnRestartLevel(InputAction.CallbackContext context);
+        void OnKeyMoveBackward(InputAction.CallbackContext context);
+        void OnKeyTurnLeft(InputAction.CallbackContext context);
+        void OnKeyTurnRight(InputAction.CallbackContext context);
     }
 }
