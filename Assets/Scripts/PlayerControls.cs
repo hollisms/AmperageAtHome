@@ -122,6 +122,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""94c3a66d-bd3d-413e-ac0d-a5990d8134d1"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RestartLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""fc777f7c-a30a-4a23-ab51-6aab58718762"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",

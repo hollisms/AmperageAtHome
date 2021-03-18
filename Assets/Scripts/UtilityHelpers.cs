@@ -2,27 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class UtilityHelpers 
+public static class UtilityHelpers
 {
-    public static void MoveObjectToGridLocation(GameObject obj, string location) {
+    public static void MoveGateToGridLocation(GameObject obj, string location)
+    {
+        MoveConeToGridLocation(obj, location);
+
+        Vector3 v;
+        v = obj.transform.position;
+        v.y = 0.8f;
+        v.x -= 0.1f;
+        obj.transform.position = v;
+    }
+    public static void MoveConeToGridLocation(GameObject obj, string location)
+    {
         obj.transform.position = GetPositionfromLocation(location);
     }
 
-    public static Vector3 GetPositionfromLocation(string location) {
+    public static Vector3 GetPositionfromLocation(string location)
+    {
 
         float offsetX = 0.0f;   // where the grid should start in world space
         float offsetZ = -0.434f;
         float sizeX = 0.762f;  // size of grid 
         float sizeZ = 0.762f;
-        
+
         Vector3 v = new Vector3(offsetX, 0.2f, offsetZ);
 
         // I'm sorry?
-        switch (location) {
+        switch (location)
+        {
             case "A1":
                 v.x += (sizeX * 1);
                 v.z += (sizeZ * 1);
-                break;            
+                break;
             case "A2":
                 v.x += (sizeX * 1);
                 v.z += (sizeZ * 2);
@@ -67,7 +80,7 @@ public static class UtilityHelpers
             case "B1":
                 v.x += (sizeX * 2);
                 v.z += (sizeZ * 1);
-                break;            
+                break;
             case "B2":
                 v.x += (sizeX * 2);
                 v.z += (sizeZ * 2);
@@ -112,7 +125,7 @@ public static class UtilityHelpers
             case "C1":
                 v.x += (sizeX * 3);
                 v.z += (sizeZ * 1);
-                break;            
+                break;
             case "C2":
                 v.x += (sizeX * 3);
                 v.z += (sizeZ * 2);
@@ -157,7 +170,7 @@ public static class UtilityHelpers
             case "D1":
                 v.x += (sizeX * 4);
                 v.z += (sizeZ * 1);
-                break;            
+                break;
             case "D2":
                 v.x += (sizeX * 4);
                 v.z += (sizeZ * 2);
@@ -202,7 +215,7 @@ public static class UtilityHelpers
             case "E1":
                 v.x += (sizeX * 5);
                 v.z += (sizeZ * 1);
-                break;            
+                break;
             case "E2":
                 v.x += (sizeX * 5);
                 v.z += (sizeZ * 2);
@@ -254,5 +267,5 @@ public static class UtilityHelpers
         return v;
     }
 
-    
+
 }
