@@ -16,6 +16,8 @@ public class CourseManager : MonoBehaviour
     static public SetupLevelBounce bounceRacingCourse = null;
     static public SetupLevelLightspeed lightSpeedRacingCourse = null;
 
+    static public int currentCourse = 0;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -41,7 +43,24 @@ public class CourseManager : MonoBehaviour
             lightSpeedRacingCourse = ScriptableObject.CreateInstance<SetupLevelLightspeed>();
         }
 
-        lightSpeedRacingCourse.SetupLevel();
+        switch (currentCourse)
+        {
+            case 0:
+                barrelRacingCourse.SetupLevel();
+                break;
+            case 1:
+                bounceRacingCourse.SetupLevel();
+                break;
+            case 2:
+                slalomRacingCourse.SetupLevel();
+                break;
+            case 3:
+                lightSpeedRacingCourse.SetupLevel();
+                break;
+            default:
+                Debug.LogError("No course loaded!");
+                break;
+        }
     }
 
     // Update is called once per frame

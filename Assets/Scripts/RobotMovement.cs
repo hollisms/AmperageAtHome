@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 
 
 public class RobotMovement : MonoBehaviour
@@ -22,7 +21,7 @@ public class RobotMovement : MonoBehaviour
     public float smooth = 5.0f;
     public float maxVelocity = 2.0f;
     public float joystickDeadzone = 0.05f;
-    public int driveType = 0;
+    public static int driveType = 0;
 
     void Start()
     {
@@ -30,10 +29,7 @@ public class RobotMovement : MonoBehaviour
         rbRightMotor = GameObject.Find("RightMotor").GetComponent<Rigidbody>();
     }
 
-    void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+
 
     void Awake()
     {
@@ -61,7 +57,7 @@ public class RobotMovement : MonoBehaviour
         controls.GamePlay.KeyTurnRight.performed += ctx => RightKey(true);
         controls.GamePlay.KeyTurnRight.canceled += ctx => RightKey(false);
 
-        controls.GamePlay.RestartLevel.performed += ctx => RestartLevel();
+        controls.GamePlay.RestartLevel.performed += ctx => UtilityHelpers.RestartLevel();
 
         // TODO should probably be in Start
         txtConeCounter = GameObject.Find("txtConeCounter").GetComponent<Text>();

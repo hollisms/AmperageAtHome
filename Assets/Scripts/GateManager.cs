@@ -12,7 +12,8 @@ public static class GateManager
 
     private static int iCurrentGate = 0;
     private static int iLastGate = 100;
-    private static GameObject[] m_Gates = new GameObject[100];
+    private static int iMaxGate = 100;
+    private static GameObject[] m_Gates = new GameObject[iMaxGate];
 
     public static void StartTimer()
     {
@@ -46,12 +47,7 @@ public static class GateManager
 
     public static void AddGate(GameObject obj, int index, bool addNumber = false)
     {
-        if (index > iLastGate)
-        {
-            Debug.LogError("Number of Gates out of bounds.");
-            return;
-        }
-
+        Debug.Assert(index < iMaxGate, "Number of Gates out of bounds. Index: " + index.ToString() + " iLastGate: " + iMaxGate.ToString());
         m_Gates[index] = obj;
 
         if (!addNumber) return;
@@ -67,11 +63,8 @@ public static class GateManager
 
     public static GameObject GetGate(int index)
     {
-        if (index > iLastGate)
-        {
-            Debug.LogError("Number of Gates out of bounds.");
-            return null;
-        }
+        Debug.Assert(index < iLastGate, "Number of Gates out of bounds. Index: " + index.ToString() + " iLastGate: " + iLastGate.ToString());
+
         return m_Gates[index];
     }
 
@@ -98,6 +91,7 @@ public static class GateManager
         iCurrentGate = 0;
         for (int c = 1; c <= iLastGate; c++)
         {
+            Debug.Assert(m_Gates[c] != null, "m_Gates[" + c.ToString() + "] is null.");
             m_Gates[c].SetActive(false);
         }
     }

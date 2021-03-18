@@ -8,73 +8,73 @@ public class SetupLevelBounce : ScriptableObject
     {
         GameObject newObj;
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "B1";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "B1";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "B2";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "B2";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "B4";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "B4";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "B5";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "B5";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "B7";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "B7";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "B8";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "B8";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "B10";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "B10";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "B11";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "B11";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "D1";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "D1";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "D2";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "D2";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "D3";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "D3";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "D5";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "D5";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "D7";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "D7";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "D8";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "D8";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "D10";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "D10";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "D11";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "D11";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
-        Instantiate(CourseManager.instance.cone);
-        CourseManager.instance.cone.name = "E3";
-        UtilityHelpers.MoveConeToGridLocation(CourseManager.instance.cone, CourseManager.instance.cone.name);
+        newObj = Instantiate(CourseManager.instance.cone);
+        newObj.name = "E3";
+        UtilityHelpers.MoveConeToGridLocation(newObj, newObj.name);
 
         newObj = Instantiate(CourseManager.instance.startGate);
         UtilityHelpers.MoveGateToGridLocation(newObj, "C2");

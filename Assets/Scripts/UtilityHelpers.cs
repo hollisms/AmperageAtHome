@@ -1,9 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
+using System; // for FirstOrDefault Function
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public static class UtilityHelpers
 {
+    public static void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     public static void MoveGateToGridLocation(GameObject obj, string location)
     {
         MoveConeToGridLocation(obj, location);
