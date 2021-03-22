@@ -73,6 +73,22 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""LeftHandbrake"",
+                    ""type"": ""Button"",
+                    ""id"": ""161ec02e-30c7-4f4f-8ed3-4a93b56cb916"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""RightHandbrake"",
+                    ""type"": ""Button"",
+                    ""id"": ""311a29b0-a89c-496f-9427-d6862a1c66c9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -163,6 +179,28 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""KeyTurnRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ce98578d-7307-468c-9fde-7567285b382e"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftHandbrake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5103d65f-1a7c-47ca-bf63-6e367fbde5d9"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RightHandbrake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -178,6 +216,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_GamePlay_KeyMoveBackward = m_GamePlay.FindAction("KeyMoveBackward", throwIfNotFound: true);
         m_GamePlay_KeyTurnLeft = m_GamePlay.FindAction("KeyTurnLeft", throwIfNotFound: true);
         m_GamePlay_KeyTurnRight = m_GamePlay.FindAction("KeyTurnRight", throwIfNotFound: true);
+        m_GamePlay_LeftHandbrake = m_GamePlay.FindAction("LeftHandbrake", throwIfNotFound: true);
+        m_GamePlay_RightHandbrake = m_GamePlay.FindAction("RightHandbrake", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -234,6 +274,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_GamePlay_KeyMoveBackward;
     private readonly InputAction m_GamePlay_KeyTurnLeft;
     private readonly InputAction m_GamePlay_KeyTurnRight;
+    private readonly InputAction m_GamePlay_LeftHandbrake;
+    private readonly InputAction m_GamePlay_RightHandbrake;
     public struct GamePlayActions
     {
         private @PlayerControls m_Wrapper;
@@ -245,6 +287,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @KeyMoveBackward => m_Wrapper.m_GamePlay_KeyMoveBackward;
         public InputAction @KeyTurnLeft => m_Wrapper.m_GamePlay_KeyTurnLeft;
         public InputAction @KeyTurnRight => m_Wrapper.m_GamePlay_KeyTurnRight;
+        public InputAction @LeftHandbrake => m_Wrapper.m_GamePlay_LeftHandbrake;
+        public InputAction @RightHandbrake => m_Wrapper.m_GamePlay_RightHandbrake;
         public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -275,6 +319,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @KeyTurnRight.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyTurnRight;
                 @KeyTurnRight.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyTurnRight;
                 @KeyTurnRight.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnKeyTurnRight;
+                @LeftHandbrake.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnLeftHandbrake;
+                @LeftHandbrake.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnLeftHandbrake;
+                @LeftHandbrake.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnLeftHandbrake;
+                @RightHandbrake.started -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnRightHandbrake;
+                @RightHandbrake.performed -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnRightHandbrake;
+                @RightHandbrake.canceled -= m_Wrapper.m_GamePlayActionsCallbackInterface.OnRightHandbrake;
             }
             m_Wrapper.m_GamePlayActionsCallbackInterface = instance;
             if (instance != null)
@@ -300,6 +350,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @KeyTurnRight.started += instance.OnKeyTurnRight;
                 @KeyTurnRight.performed += instance.OnKeyTurnRight;
                 @KeyTurnRight.canceled += instance.OnKeyTurnRight;
+                @LeftHandbrake.started += instance.OnLeftHandbrake;
+                @LeftHandbrake.performed += instance.OnLeftHandbrake;
+                @LeftHandbrake.canceled += instance.OnLeftHandbrake;
+                @RightHandbrake.started += instance.OnRightHandbrake;
+                @RightHandbrake.performed += instance.OnRightHandbrake;
+                @RightHandbrake.canceled += instance.OnRightHandbrake;
             }
         }
     }
@@ -313,5 +369,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnKeyMoveBackward(InputAction.CallbackContext context);
         void OnKeyTurnLeft(InputAction.CallbackContext context);
         void OnKeyTurnRight(InputAction.CallbackContext context);
+        void OnLeftHandbrake(InputAction.CallbackContext context);
+        void OnRightHandbrake(InputAction.CallbackContext context);
     }
 }

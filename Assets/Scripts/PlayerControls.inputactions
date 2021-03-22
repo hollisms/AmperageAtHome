@@ -60,6 +60,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "LeftHandbrake",
+                    "type": "Button",
+                    "id": "161ec02e-30c7-4f4f-8ed3-4a93b56cb916",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RightHandbrake",
+                    "type": "Button",
+                    "id": "311a29b0-a89c-496f-9427-d6862a1c66c9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -148,6 +164,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "KeyTurnRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ce98578d-7307-468c-9fde-7567285b382e",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftHandbrake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5103d65f-1a7c-47ca-bf63-6e367fbde5d9",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightHandbrake",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

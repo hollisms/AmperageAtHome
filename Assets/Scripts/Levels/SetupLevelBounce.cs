@@ -105,7 +105,7 @@ public class SetupLevelBounce : ScriptableObject
         GateManager.AddGate(newObj, 6, true);
 
         newObj = Instantiate(CourseManager.instance.finishGate);
-        UtilityHelpers.MoveGateToGridLocation(newObj, "C10");
+        UtilityHelpers.MoveGateToGridLocation(newObj, "C11");
         GateManager.AddGate(newObj, 7);
 
         GateManager.SetLastGate(7);

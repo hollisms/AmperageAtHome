@@ -98,7 +98,7 @@ public class SetupLevelSlalom : ScriptableObject
         GateManager.AddGate(newObj, 9, true);
 
         newObj = Instantiate(CourseManager.instance.finishGate);
-        UtilityHelpers.MoveGateToGridLocation(newObj, "C2");
+        UtilityHelpers.MoveGateToGridLocation(newObj, "C1");
         GateManager.AddGate(newObj, 10);
 
         GateManager.SetLastGate(10);

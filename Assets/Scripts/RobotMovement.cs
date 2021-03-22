@@ -23,6 +23,9 @@ public class RobotMovement : MonoBehaviour
     public float joystickDeadzone = 0.05f;
     public static int driveType = 0;
 
+    public bool leftHandBrakeOn = false;
+    public bool rightHandBrakeOn = false;
+
     void Start()
     {
         rbLeftMotor = GameObject.Find("LeftMotor").GetComponent<Rigidbody>();
@@ -58,6 +61,15 @@ public class RobotMovement : MonoBehaviour
         controls.GamePlay.KeyTurnRight.canceled += ctx => RightKey(false);
 
         controls.GamePlay.RestartLevel.performed += ctx => UtilityHelpers.RestartLevel();
+
+        // Handbrakes for tank drive
+        controls.GamePlay.LeftHandbrake.performed += ctx => { leftHandBrakeOn = true; };
+        controls.GamePlay.LeftHandbrake.canceled += ctx => { leftHandBrakeOn = false; };
+        controls.GamePlay.RightHandbrake.performed += ctx => { rightHandBrakeOn = true; };
+        controls.GamePlay.RightHandbrake.canceled += ctx => { rightHandBrakeOn = false; };
+
+
+
 
         // TODO should probably be in Start
         txtConeCounter = GameObject.Find("txtConeCounter").GetComponent<Text>();
@@ -122,6 +134,19 @@ public class RobotMovement : MonoBehaviour
         Vector3 fR = new Vector3(0, 0, moveRight.y * coAcceleration / 2) * Time.deltaTime;
 
         // apply forces
+        // if left handbrake pressed then zero left side force
+        if (leftHandBrakeOn)
+        {
+            fL.z = 0;
+            fR.z *= 1.5f;
+
+        }
+        if (rightHandBrakeOn)
+        {
+            fR.z = 0.0f;
+            fL.z *= 1.5f;
+        }
+
         rbLeftMotor.AddForce(transform.rotation * (fL));
         rbRightMotor.AddForce(transform.rotation * (fR));
 

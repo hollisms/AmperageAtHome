@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public static class UtilityHelpers
 {
+    public static void LoadMainScene()
+    {
+        SceneManager.LoadScene("Barrel Racing");
+    }
+
     public static void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
